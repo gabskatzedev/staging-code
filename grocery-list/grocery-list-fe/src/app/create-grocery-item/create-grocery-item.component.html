@@ -1,0 +1,41 @@
+<div class="container myWrap">
+    <div class="row">
+        <div class="col col-md-6">
+            <h1>Create product</h1>
+            <img class="mySize" src="https://assets1.risnews.com/styles/content_sm/s3/2018-04/shopping-cart.png?itok=LUk_XbaE" alt="">
+        </div>
+        <div class="col col-md-6">
+            <div [formGroup] = 'form'>
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" id="name" formControlName="groceryName" aria-describedby="name" placeholder="Enter product name">
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <input type="text" class="form-control" id="description" formControlName="groceryDescription" aria-describedby="description" placeholder="Enter product description">
+                </div>
+
+                <div class="form-group">
+                    <label>Price</label>
+                    <input type="text" class="form-control" id="price" formControlName="groceryPrice" aria-describedby="price" placeholder="Enter product price">
+                </div>
+                <div class="form-group">
+                    <label>Type</label>
+                    <input type="text" class="form-control" id="category" formControlName="groceryCategory" aria-describedby="category" placeholder="Enter product category">
+                </div>
+                <div class="form-group">
+                    <label>Image</label>
+                    <input type="text" class="form-control" id="image" formControlName="groceryImage" aria-describedby="image" placeholder="Enter image">
+                </div>
+                <div class="form-group">
+                    <label>Quantity</label>
+                    <input type="text" class="form-control" id="quantity" formControlName="groceryQuantity" aria-describedby="quantity" placeholder="Enter quantity">
+                </div>
+                <button type="submit" class="btn btn-primary" (click)='createItem()' routerLink="/shopping-list">Create</button>
+                <h4>{{response}}</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+
