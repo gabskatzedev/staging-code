@@ -1,0 +1,37 @@
+<div class="container">
+    <!-- FIRST BUTTON HTML -->
+<div class="row spacer otherfont">
+    <h1>Let's view all pets</h1>
+</div>
+<!-- SECOND BUTTON HTML -->
+<div class="row spacer">
+    <div class="col-8">
+        <h3>Retrieve all pets from server:</h3>
+        <div class='table-responsive'>
+                <table class='table' *ngIf='petListDisplay && petListDisplay.length'>
+                  <thead>
+                    <tr>
+                      <th>Pet Id</th>
+                      <th>Pet Name</th>
+                      <th>Animal Type</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor='let temp of petListDisplay'>
+                      <td>{{temp.petId}}</td>
+                      <td>{{temp.petName}}</td>
+                      <td>{{temp.animalType}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+    </div>
+    <div class="col-2">
+        <button type="button" class="btn btn-success" (click)="firstButton()">First Button</button>
+    </div>
+    <div class="col-2">
+      <button type="button" class="btn btn-warning" (click)="secondButton()">Filter</button>
+      <input type="text" class="form-control" [(ngModel)] = "animalType" placeholder="animalType">
+    </div>
+</div>
+</div>

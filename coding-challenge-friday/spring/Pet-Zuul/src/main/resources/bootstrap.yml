@@ -1,0 +1,18 @@
+#Zuul's Config
+
+server:
+  port: 9015
+  
+spring:
+  application:
+    name: pet-zuul
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.value}
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:9999/eureka
+      

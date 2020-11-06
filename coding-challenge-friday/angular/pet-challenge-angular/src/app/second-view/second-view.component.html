@@ -1,0 +1,22 @@
+
+<div class="container myWrap">
+    <div class="row">
+        <div class="col col-md-6">
+            <h1>New Pet</h1>
+        </div>
+        <div class="col col-md-6">
+            <div [formGroup] = 'form'>
+                <div class="form-group">
+                    <label>Pet Name</label>
+                    <input type="text" class="form-control" id="petName" formControlName="petName" aria-describedby="petName" placeholder="Enter pet name">
+                </div>
+                <div class="form-group">
+                    <label>Pet Type</label>
+                    <input type="text" class="form-control" id="petType" formControlName="petType" aria-describedby="petType" placeholder="Enter pet type">
+                </div>
+                <button type="submit" class="btn btn-primary" (click)='createPet()'>Create</button>
+                <h4>{{response}}</h4>
+            </div>
+        </div>
+    </div>
+</div>
